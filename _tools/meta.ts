@@ -43,15 +43,20 @@ export const makeOptions = (version: string): BuildOptions => ({
       version: "1.0.0",
       subPath: "message.js",
     },
-    "https://deno.land/x/isx@1.2.0/is_number.ts": {
+    "https://deno.land/x/isx@1.3.0/is_number.ts": {
       name: "@miyauci/isx",
-      version: "1.2.0",
-      subPath: "is_number",
+      version: "1.3.0",
+      subPath: "is_number.js",
     },
-    "https://deno.land/x/isx@1.2.0/number/is_non_negative_integer.ts": {
+    "https://deno.land/x/isx@1.3.0/number/is_non_negative_integer.ts": {
       name: "@miyauci/isx",
-      version: "1.2.0",
-      subPath: "number/is_non_negative_integer",
+      version: "1.3.0",
+      subPath: "number/is_non_negative_integer.js",
+    },
+    "https://deno.land/x/isx@1.3.0/number/is_unit_interval.ts": {
+      name: "@miyauci/isx",
+      version: "1.3.0",
+      subPath: "number/is_unit_interval.js",
     },
     "https://deno.land/x/jfv_parser@1.0.0/mod.ts": {
       name: "@httpland/jfv-parser",

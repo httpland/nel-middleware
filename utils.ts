@@ -9,7 +9,9 @@ import {
 } from "./deps.ts";
 import type { NELPolicy } from "./types.ts";
 
-/** Assert the {@link NELPolicy} is valid. */
+/** Assert the {@link NELPolicy} is valid.
+ * @throws {Error} If the policy include invalid field.
+ */
 export function assertValidNELPolicy(
   policy: DeepReadonly<NELPolicy>,
 ): asserts policy {
