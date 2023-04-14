@@ -12,7 +12,7 @@
 HTTP network error logging(NEL) middleware.
 
 Compliant with
-[Network Error Logging](https://w3c.github.io/network-error-logging/#dfn-nel-policies).
+[W3C, Network Error Logging](https://w3c.github.io/network-error-logging/#dfn-nel-policies).
 
 ## Middleware
 
