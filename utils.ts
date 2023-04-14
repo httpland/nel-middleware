@@ -1,19 +1,14 @@
 // Copyright 2023-latest the httpland authors. All rights reserved. MIT license.
 // This module is browser compatible.
 
-import {
-  type DeepReadonly,
-  isNonNegativeInteger,
-  isNumber,
-  isUnitInterval,
-} from "./deps.ts";
+import { isNonNegativeInteger, isNumber, isUnitInterval } from "./deps.ts";
 import type { NELPolicy } from "./types.ts";
 
 /** Assert the {@link NELPolicy} is valid.
  * @throws {Error} If the policy include invalid field.
  */
 export function assertValidNELPolicy(
-  policy: DeepReadonly<NELPolicy>,
+  policy: NELPolicy,
 ): asserts policy {
   const { max_age, success_fraction, failure_fraction } = policy;
 

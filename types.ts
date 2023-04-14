@@ -4,23 +4,23 @@
 /** NEL policy API. */
 export interface NELPolicy {
   /** NEL policy lifetime. */
-  max_age: number;
+  readonly max_age: number;
 
   /** Endpoint group to which the report will be sent. */
-  report_to?: string;
+  readonly report_to?: string;
 
   /** Whether to enable origin subdomains. */
-  include_subdomains?: boolean;
+  readonly include_subdomains?: boolean;
 
   /** Sampling rate for successful network requests. */
-  success_fraction?: number;
+  readonly success_fraction?: number;
 
   /** Sampling rate for failed network requests. */
-  failure_fraction?: number;
+  readonly failure_fraction?: number;
 
   /** Request header field to be included in the report. */
-  request_headers?: string[];
+  readonly request_headers?: readonly string[];
 
   /** Response header field to be included in the report. */
-  response_headers?: string[];
+  readonly response_headers?: readonly string[];
 }

@@ -1,12 +1,7 @@
 // Copyright 2023-latest the httpland authors. All rights reserved. MIT license.
 // This module is browser compatible.
 
-import {
-  DeepReadonly,
-  type Middleware,
-  stringifyJfv,
-  withHeader,
-} from "./deps.ts";
+import { type Middleware, stringifyJfv, withHeader } from "./deps.ts";
 import { assertValidNELPolicy } from "./utils.ts";
 import { Header } from "./constants.ts";
 import type { NELPolicy } from "./types.ts";
@@ -32,7 +27,7 @@ import type { NELPolicy } from "./types.ts";
  *
  * @throws {Error} If the endpoints include invalid member.
  */
-export function nel(policy: DeepReadonly<NELPolicy>): Middleware {
+export function nel(policy: NELPolicy): Middleware {
   assertValidNELPolicy(policy);
 
   const fieldValue = stringifyJfv([policy]);
