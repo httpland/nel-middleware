@@ -1,7 +1,11 @@
 // Copyright 2023-latest the httpland authors. All rights reserved. MIT license.
 // This module is browser compatible.
 
-import { isNonNegativeInteger, isNumber, isUnitInterval } from "./deps.ts";
+import {
+  assertNonNegativeInteger,
+  assertUnitInterval,
+  isNumber,
+} from "./deps.ts";
 import type { NELPolicy } from "./types.ts";
 
 /** Assert the {@link NELPolicy} is valid.
@@ -28,17 +32,4 @@ export function assertValidNELPolicy(
       failure_fraction,
       `failure_fraction must be unit interval. ${failure_fraction}`,
     );
-}
-
-/** Assert the input is non-negative integer. */
-export function assertNonNegativeInteger(
-  input: number,
-  msg?: string,
-): asserts input {
-  if (!isNonNegativeInteger(input)) throw Error(msg);
-}
-
-/** Assert the input is unit interval. */
-export function assertUnitInterval(input: number, msg?: string): asserts input {
-  if (!isUnitInterval(input)) throw Error(msg);
 }

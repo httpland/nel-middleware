@@ -1,8 +1,4 @@
-import {
-  assertNonNegativeInteger,
-  assertUnitInterval,
-  assertValidNELPolicy,
-} from "./utils.ts";
+import { assertValidNELPolicy } from "./utils.ts";
 import {
   assertFalse,
   assertThrows,
@@ -10,65 +6,6 @@ import {
   it,
   NELPolicy,
 } from "./_dev_deps.ts";
-
-describe("assertUnitInterval", () => {
-  it("should return void", () => {
-    const table: number[] = [
-      1,
-      0,
-      0.5,
-      0.0001,
-      1.0,
-    ];
-
-    table.forEach((input) => {
-      assertFalse(assertUnitInterval(input));
-    });
-  });
-  it("should throw error", () => {
-    const table: number[] = [
-      NaN,
-      Infinity,
-      -Infinity,
-      1.01,
-      1.00001,
-      -0.1,
-    ];
-
-    table.forEach((input) => {
-      assertThrows(() => assertUnitInterval(input));
-    });
-  });
-});
-
-describe("assertNonNegativeInteger", () => {
-  it("should return void", () => {
-    const table: number[] = [
-      1,
-      0,
-      1.0,
-      10000,
-    ];
-
-    table.forEach((input) => {
-      assertFalse(assertNonNegativeInteger(input));
-    });
-  });
-  it("should throw error", () => {
-    const table: number[] = [
-      NaN,
-      Infinity,
-      -Infinity,
-      1.01,
-      1.00001,
-      -0.1,
-    ];
-
-    table.forEach((input) => {
-      assertThrows(() => assertNonNegativeInteger(input));
-    });
-  });
-});
 
 describe("assertValidNELPolicy", () => {
   it("should return void", () => {
